@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#00d1ff</color>
+    <color name="colorDay">#082e36</color>
+    <color name="colorJina">#14D2FA</color>
+    <color name="colorKisawe">#14FA3A</color>
+    <color name="colorMnyambuliko">#EBFA14</color>
+    <color name="colorkundi">#0F5BF3</color>
+    <color name="colorMfano">#7FE11E</color>
+    <color name="colorNight">#aca7a7</color>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    <item-->
+<!--        android:id="@+id/app_bar_search"-->
+<!--        android:title="Search"-->
+<!--        app:actionViewClass="android.widget.SearchView" />-->
+    <item android:title="History"
+        android:id="@+id/history"
+
+        />
+    <item android:title="BookMarks"
+        android:id="@+id/bookMarks"
+        />
+    <item android:title="Notes"
+        android:id="@+id/notes"
+        />
+    <item android:title="RandomWord"
+        android:id="@+id/randomWord"
+        />
+    <item android:title="Settings"
+        android:id="@+id/settings"
+        />
+    <item android:title="Backup"
+        android:id="@+id/backup"
+        />
+    <item android:title="Restore"
+        android:id="@+id/restore"
+        />
+    <item android:title="Help"
+        android:id="@+id/help"
+        />
+    <item android:title="Exit"
+        android:id="@+id/exit"
+        />
+</menu>
