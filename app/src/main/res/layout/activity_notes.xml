@@ -5,16 +5,17 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".Notes">
+    tools:context=".History">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:background="@color/colorPrimary"
         android:layout_height="?attr/actionBarSize">
-        <ImageButton
+        <ImageView
             android:layout_width="wrap_content"
+            android:scaleType="centerCrop"
             android:id="@+id/imageButton"
-            android:src="@android:drawable/stat_sys_phone_call_forward"
+            android:src="@drawable/baseline_arrow_back_24"
             android:layout_height="wrap_content"/>
     </androidx.appcompat.widget.Toolbar>
     <androidx.recyclerview.widget.RecyclerView

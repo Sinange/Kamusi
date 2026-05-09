@@ -1,134 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/type"
-        android:text="Kundi la neno"
-        android:textColor="@color/colorkundi"
-        android:layout_marginStart="20dp"
-        android:searchResultHighlightColor="@color/colorAccent"
-        android:textAlignment="textStart"
-        android:textSize="25sp"
-        android:textStyle="bold|italic"
-        android:layout_height="wrap_content"/>
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="14dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardBackgroundColor="@color/colorDay"
+    app:cardElevation="4dp">
 
-<View
-    android:layout_width="match_parent"
-    android:layout_height="2dp"
-    android:layout_marginTop="20dp"
-    android:background="@drawable/underline"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/jina"
-        android:textColor="@color/colorAccent"
-        android:layout_marginStart="3dp"
-        android:text="Jina"
-        android:searchResultHighlightColor="@color/colorAccent"
-        android:textAlignment="textStart"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/maana"
-        android:layout_marginStart="34dp"
-        android:text="Maana"
-        android:searchResultHighlightColor="@color/colorAccent"
-        android:textAlignment="textStart"
-        android:textSize="18sp"
-        android:textStyle="bold|italic"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/maanapili"
-        android:layout_marginStart="34dp"
-        android:text="MaanaPili"
-        android:searchResultHighlightColor="@color/colorAccent"
-        android:textAlignment="textStart"
-        android:textSize="18sp"
-        android:textStyle="bold|italic"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_marginStart="3dp"
-        android:text="Kisawe"
-        android:searchResultHighlightColor="@color/colorAccent"
-        android:textAlignment="textStart"
-        android:textColor="@color/colorKisawe"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/kisawe"
-        android:layout_marginStart="34dp"
-        android:text="Kisawe"
-        android:searchResultHighlightColor="@color/colorAccent"
-        android:textAlignment="textStart"
-        android:textSize="18sp"
-        android:textStyle="bold|italic"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_marginStart="3dp"
-        android:text="Mnyambuliko wa kitenzi"
-        android:textColor="@color/colorMnyambuliko"
-        android:searchResultHighlightColor="@color/colorAccent"
-        android:textAlignment="textStart"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/mnyambuliko"
-        android:layout_marginStart="34dp"
-        android:text="Mnyambuliko wa kitenzi"
-        android:searchResultHighlightColor="@color/colorAccent"
-        android:textAlignment="textStart"
-        android:textSize="18sp"
-        android:textStyle="bold|italic"
-        android:layout_height="wrap_content"/>
-    <View
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/underline"/>
-    <TextView
-        android:textColor="@color/colorMfano"
-        android:layout_width="wrap_content"
-        android:layout_marginStart="3dp"
-        android:text="Mfano kwa sentensi"
-        android:searchResultHighlightColor="@color/colorAccent"
-        android:textAlignment="textStart"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/mfano"
-        android:layout_marginStart="34dp"
-        android:text="Mfano"
-        android:searchResultHighlightColor="@color/colorAccent"
-        android:textAlignment="textStart"
-        android:textSize="18sp"
-        android:textStyle="bold|italic"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/mfanoPili"
-        android:layout_marginStart="34dp"
-        android:text="MfanoPili"
-        android:searchResultHighlightColor="@color/colorAccent"
-        android:textAlignment="textStart"
-        android:textSize="18sp"
-        android:textStyle="bold|italic"
-        android:layout_height="wrap_content"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/underline"/>
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top Header: Word, TTS Button, and Metadata -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Word Title and Grammatical Class -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/sauti_button"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/jina"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jina"
+                    android:textColor="#12F0B4"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <!-- Badge-style Ngeli / Noun Class -->
+                <LinearLayout
+                    android:id="@+id/layout_ngeli"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/underline"
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="2dp">
+
+                    <TextView
+                        android:id="@+id/ngeli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ngeli"
+                        android:textColor="#B312F0B4"
+                        android:textSize="13sp"
+                        android:textStyle="italic" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Modern Audio TTS Button with custom touch styling -->
+            <ImageButton
+                android:id="@+id/sauti_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Sikiliza Sauti (TTS)"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="@color/colorAccent" />
+        </RelativeLayout>
+
+        <!-- Word Group / Type (KN / Kundi la Neno) Badge -->
+        <RelativeLayout
+            android:id="@+id/layout_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/underline"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:text="Kundi la neno"
+                android:textColor="@color/colorkundi"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- SUBTLE SEPARATOR -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="12dp"
+            android:background="#20FFFFFF" />
+
+        <!-- First Meaning (Maana) -->
+        <LinearLayout
+            android:id="@+id/layout_maana"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maana"
+                android:textColor="#80FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/maana"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Maana ya kwanza"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Second Meaning (Maana Pili) -->
+        <LinearLayout
+            android:id="@+id/layout_maanapili"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/maanapili"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Maana ya pili"
+                android:textColor="#EEEEEE"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Synonyms (Kisawe) Section -->
+        <LinearLayout
+            android:id="@+id/layout_kisawe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kisawe (Synonym)"
+                android:textColor="@color/colorKisawe"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/kisawe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Kisawe"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- Conjugations (Mnyambuliko) Section -->
+        <LinearLayout
+            android:id="@+id/layout_mnyambuliko"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mnyambuliko (Conjugation)"
+                android:textColor="@color/colorMnyambuliko"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mnyambuliko"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Mnyambuliko"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- Examples (Mifano) Section -->
+        <LinearLayout
+            android:id="@+id/layout_mifano"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mifano (Examples)"
+                android:textColor="@color/colorMfano"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mfano"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Mfano wa kwanza"
+                android:textColor="#DDFFFFFF"
+                android:textSize="15sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/mfanoPili"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Mfano wa pili"
+                android:textColor="#CCFFFFFF"
+                android:textSize="15sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -4,30 +4,24 @@ public class DatabaseModel {
     String kundilaManeno;
     String maanaPili;
     String mfanoPili;
-
-    public DatabaseModel(String kundilaManeno, String jina, String maana,String maanaPili, String kisawe, String mnyambuliko, String mfano , String mfanoPili) {
-        this.kundilaManeno = kundilaManeno;
-        this.maanaPili = maanaPili;
-        this.mfanoPili = mfanoPili;
-        this.jina = jina;
-        this.maana = maana;
-        this.kisawe = kisawe;
-        this.mnyambuliko = mnyambuliko;
-        this.mfano = mfano;
-    }
-
+    String Ngeli;
     public String getMaanaPili() {
         return maanaPili;
     }
-
     public void setMaanaPili(String maanaPili) {
         this.maanaPili = maanaPili;
+    }
+
+    public String getNgeli() {
+        return Ngeli;
+    }
+    public void setNgeli(String ngeli) {
+        Ngeli = ngeli;
     }
 
     public String getMfanoPili() {
         return mfanoPili;
     }
-
     public void setMfanoPili(String mfanoPili) {
         this.mfanoPili = mfanoPili;
     }
@@ -40,9 +34,13 @@ public class DatabaseModel {
         return kundilaManeno;
     }
 
-    public DatabaseModel(String kundilaManeno, String jina, String maana, String kisawe, String mnyambuliko, String mfano) {
+
+    public DatabaseModel(String kundilaManeno, String jina,String ngeli, String maana,String maanaPili, String kisawe, String mnyambuliko,String mfano,String mfanoPili) {
         this.kundilaManeno = kundilaManeno;
+        this.maanaPili = maanaPili;
+        this.mfanoPili = mfanoPili;
         this.jina = jina;
+        this.Ngeli=ngeli;
         this.maana = maana;
         this.kisawe = kisawe;
         this.mnyambuliko = mnyambuliko;
@@ -95,9 +93,11 @@ public class DatabaseModel {
         this.mfano = mfano;
     }
 
-    public DatabaseModel(String jina, String maana, String kisawe, String mnyambuliko, String mfano) {
+    public DatabaseModel(String jina, String maana,String maanaPili, String kisawe, String mnyambuliko, String mfano,String mfanoPili) {
         this.jina = jina;
         this.maana = maana;
+        this.maanaPili=maanaPili;
+        this.mfanoPili=mfanoPili;
         this.kisawe = kisawe;
         this.mnyambuliko = mnyambuliko;
         this.mfano = mfano;

@@ -6,13 +6,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
+
 
 public class Database extends SQLiteOpenHelper {
   public static final String TABLE_NAME="Kamusi";
   public  static final String COLUMN_ID="id";
   public static final String COLUMN_JINA="jina";
   public static final String COLUMN_kundi="neno";
+  public static final String COLUMN_ngeli="ngeli";
   public static final String COLUMN_MAANA="maana";
   public static final String COLUMN_MPILI="maanapili";
     public static final String COLUMN_KISAWE="kisawe";
@@ -20,7 +21,7 @@ public class Database extends SQLiteOpenHelper {
     public static final String COLUMN_MFANO="mfano";
   public static final String COLUMN_MFANOPILI="mfanopili";
     Context context;
-    public Database(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+    public Database( Context context, String name,SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
         this.context=context;
     }
@@ -30,6 +31,7 @@ public class Database extends SQLiteOpenHelper {
       String createTableQuery = "CREATE TABLE " + TABLE_NAME + "(" +
               COLUMN_ID + " TEXT, " +
               COLUMN_JINA + " TEXT, " +
+              COLUMN_ngeli + " TEXT, " +
               COLUMN_kundi + " TEXT, " +
               COLUMN_MAANA + " TEXT, " +
               COLUMN_MPILI  + " TEXT, "  +

@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/app_bar_search"
-        android:icon="@drawable/m3_split_button_chevron_avd"
+        android:icon="@drawable/baseline_search_24"
         android:title="Search"
         app:showAsAction="always"
         app:actionViewClass="androidx.appcompat.widget.SearchView" />
